@@ -1,4 +1,6 @@
+import { TeacherLoginService } from './../../../@shared/service/teacher-login.service';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-teacher-login',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeacherLoginComponent implements OnInit {
 
-  constructor() { }
+  teacherLogin: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private teacherLoginService: TeacherLoginService
+  ) {
+    this.teacherLogin = this.fb.group({
+      gmail: [''],
+      password: ['']
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  submit() {
+    // this.teacherLoginService.teacherLogin(this.teacherLogin.value).subscrib(
+    //   (res:any)=>{
+
+    //   },(err)=>{
+
+    //   }
+    // )
+  }
 }

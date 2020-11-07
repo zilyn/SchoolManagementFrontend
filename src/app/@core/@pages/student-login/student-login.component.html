@@ -3,14 +3,12 @@
     <div class="loginbox">
         <img src="assets/image/avatar.png" class="avatar">
         <h1>Login Here</h1>
-        <form>
-            <p>Email Id</p>
-            <input type="text" name="" placeholder="Your email id">
-            <p>Password</p>
-            <input type="text" name="" placeholder="Your Password">
-
+        <form [formGroup]="studentLogin" (ngSubmit)="submit()">
+            <label>Email Id</label>
+            <input type="email" formControlName="gmail" placeholder="Your email id" required>
+            <label>Password</label>
+            <input type="password" formControlName="password" placeholder="Your Password" required>
             <input type="submit" name="" value="Login">
-
             <a href="#">Don't have Regestation?</a>
         </form>
     </div>
