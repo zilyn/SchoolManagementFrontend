@@ -1,3 +1,4 @@
+import { AdminDashboardComponent } from './@pages/admin-dashboard/admin-dashboard.component';
 import { StudentLoginComponent } from './@pages/student-login/student-login.component';
 import { TeacherLoginComponent } from './@pages/teacher-login/teacher-login.component';
 import { AdminLoginComponent } from './@pages/admin-login/admin-login.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'student-login',
     component: StudentLoginComponent
+  },
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent
   }
 ];
 
